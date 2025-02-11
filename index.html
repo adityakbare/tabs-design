@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Tabs</title>
+  <title>Fashion Shop</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="tabs-container">
-    <!-- Tab buttons -->
-    <div class="tabs">
-      <button class="tab-button active" onclick="switchTab(event, 'tab1')">Tab 1</button>
-      <button class="tab-button" onclick="switchTab(event, 'tab2')">Tab 2</button>
-      <button class="tab-button" onclick="switchTab(event, 'tab3')">Tab 3</button>
-      <button class="tab-button" onclick="switchTab(event, 'tab4')">Tab 4</button>
-    </div>
+    <!-- Tab navigation -->
+    <ul class="tabs">
+      <li class="tab active" onclick="showTab('new-arrivals')">New Arrivals</li>
+      <li class="tab" onclick="showTab('sale')">Sale</li>
+      <li class="tab" onclick="showTab('trending')">Trending</li>
+      <li class="tab" onclick="showTab('accessories')">Accessories</li>
+    </ul>
 
     <!-- Tab content -->
-    <div id="tab1" class="tab-content active">
-      <h2>Content for Tab 1</h2>
-      <p>This is the content for Tab 1.</p>
+    <div id="new-arrivals" class="tab-content active">
+      <h2>Fresh Trends</h2>
+      <p>Discover the latest styles! Shop new arrivals to stay ahead of the curve.</p>
     </div>
-    <div id="tab2" class="tab-content">
-      <h2>Content for Tab 2</h2>
-      <p>This is the content for Tab 2.</p>
+    <div id="sale" class="tab-content">
+      <h2>Shop the Sale</h2>
+      <p>Great fashion, great prices! Grab your favorites before they’re gone.</p>
     </div>
-    <div id="tab3" class="tab-content">
-      <h2>Content for Tab 3</h2>
-      <p>This is the content for Tab 3.</p>
+    <div id="trending" class="tab-content">
+      <h2>What's Hot</h2>
+      <p>The styles everyone’s talking about. Shop now to stay on top of trends.</p>
     </div>
-    <div id="tab4" class="tab-content">
-      <h2>Content for Tab 4</h2>
-      <p>This is the content for Tab 4.</p>
+    <div id="accessories" class="tab-content">
+      <h2>Complete Your Look</h2>
+      <p>Add the perfect finishing touches to any outfit. Shop accessories today.</p>
     </div>
   </div>
 
