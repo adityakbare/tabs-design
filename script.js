@@ -1,16 +1,28 @@
-function showTab(tabName) {
-  let contents = document.querySelectorAll('.tab-content');
-  contents.forEach(content => {
-    content.classList.remove('active');
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const tabContents = document.querySelectorAll(".tab-content");
 
-  let tabs = document.querySelectorAll('.tab');
+  function showTab(tabId) {
+    tabContents.forEach(content => {
+      content.classList.remove("active");
+    });
+
+    tabs.forEach(tab => {
+      tab.classList.remove("active");
+    });
+
+    document.getElementById(tabId).classList.add("active");
+    document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add("active");
+  }
+
+  // Attach click event
   tabs.forEach(tab => {
-    tab.classList.remove('active');
+    tab.addEventListener("click", function () {
+      const tabId = this.getAttribute("onclick").match(/showTab'(.+)'/)[1];
+      showTab(tabId);
+    });
   });
 
-  document.getElementById(tabName).classList.add('active');
-
-  let activeTab = Array.from(tabs).find(tab => tab.textContent.toLowerCase() === tabName.replace('-', ' '));
-  activeTab.classList.add('active');
-}
+  // Set default active tab
+  showTab("shop");
+});
