@@ -1,11 +1,16 @@
-function switchTab(event, tabId) {
-  let tabButtons = document.querySelectorAll('.tab-button');
-  tabButtons.forEach(button => button.classList.remove('active'));
-
-  event.target.classList.add('active');
-
-  let tabContents = document.querySelectorAll('.tab-content');
+function showTab(tabName) {
+  const tabContents = document.querySelectorAll('.tab-content');
   tabContents.forEach(content => content.classList.remove('active'));
 
-  document.getElementById(tabId).classList.add('active');
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  document.getElementById(tabName).classList.add('active');
+
+  const activeTab = document.querySelector(`[onclick="showTab('${tabName}')"]`);
+  activeTab.classList.add('active');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  showTab('new-arrivals');
+});
