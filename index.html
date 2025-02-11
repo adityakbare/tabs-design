@@ -1,41 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fashion Shop</title>
+  <title>Grilli Merch</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="tabs-container">
-    <!-- Tab navigation -->
     <ul class="tabs">
-      <li class="tab active" onclick="showTab('new-arrivals')">New Arrivals</li>
-      <li class="tab" onclick="showTab('sale')">Sale</li>
-      <li class="tab" onclick="showTab('trending')">Trending</li>
-      <li class="tab" onclick="showTab('accessories')">Accessories</li>
+      <li class="tab active" onclick="showTab('shop')">Shop</li>
+      <li class="tab" onclick="showTab('catalog')">Katalog</li>
+      <li class="tab" onclick="showTab('offers')">Promo</li>
+      <li class="tab" onclick="showTab('contacts')">Kontak</li>
     </ul>
 
-    <!-- Tab content -->
-    <div id="new-arrivals" class="tab-content active">
-      <h2>Fresh Trends</h2>
-      <p>Discover the latest styles! Shop new arrivals to stay ahead of the curve.</p>
+    <div id="shop" class="tab-content active">
+      <h2>Kami menjual, kamu membeli! Yuk belanjain Grilli Merch ini itu️</h2>
+      <p>See cut abis merchandise keren dari Grilli! Jangan sampe keabisan! </p>
+      <button class="cta-btn">Belanja Sekarang</button>
     </div>
-    <div id="sale" class="tab-content">
-      <h2>Shop the Sale</h2>
-      <p>Great fashion, great prices! Grab your favorites before they’re gone.</p>
+
+    <div id="catalog" class="tab-content">
+      <h2>Katalog Merchandise ️</h2>
+      <p>Intip koleksi merch super kece dari kita! Ada t-shirt, hoodie, dan masih banyak lagi! </p>
+      <ul>
+        <li> T-shirt Limited Edition</li>
+        <li> Hoodie Premium</li>
+        <li> Mug Unik</li>
+      </ul>
+      <a href="https://linktr.ee/vindes.store" target="_blank">Lihat Katalog Selengkapnya: @vis.merch · linktr.ee/vindes.store</a>
     </div>
-    <div id="trending" class="tab-content">
-      <h2>What's Hot</h2>
-      <p>The styles everyone’s talking about. Shop now to stay on top of trends.</p>
+
+    <div id="offers" class="tab-content">
+      <h2>Promo Spesial! </h2>
+      <p>Khusus buat kamu! Diskon 20% untuk pembelian pertama! Pakai kode <strong>GRILLI20</strong> pas checkout ya!</p>
+      <button class="cta-btn">Sikat Diskonnya!</button>
     </div>
-    <div id="accessories" class="tab-content">
-      <h2>Complete Your Look</h2>
-      <p>Add the perfect finishing touches to any outfit. Shop accessories today.</p>
+
+    <div id="contacts" class="tab-content">
+      <h2>Kontak Kami </h2>
+      <p>Mau Tanya-tanya? Cus, DM! atau cek Instagram kita di <a href="https://instagram.com/vindes.merch" target="_blank">@grilli.merch</a>! Follow juga ya! </p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
